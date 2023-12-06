@@ -455,4 +455,9 @@ console.log(CalAge(people))
        }
        console.log(FirstAndLastname(people))
 // 4) Get a list of people in the array ordered from youngest to oldest.
+//we have to use the sort methos here 
+const SortAge = (arr) => {
+    const arr1 = arr.sort((a,b) => new Date(a.DOB).getFullYear > new Date(b.DOB).getFullYear? 1 : -1)
+}
+console.log(SortAge(people))
 // 5) How many people are there in each department? 
