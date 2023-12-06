@@ -1,2 +1,2 @@
-# us-robs
+# js-probs
 Javascript Exercises for beginners 
