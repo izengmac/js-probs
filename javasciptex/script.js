@@ -446,6 +446,13 @@ console.log(CalAge(people))
 
 
 // 3) Get a list of the people's full name (firstName and lastName).
-//
+//we need to return a filtered array of fiest name and last name 
+//use filter method 
+       const FirstAndLastname = (arr) => {
+           const arr1 = people.map((person) => `${person.firstName}, ${person.lastName}`)
+           
+
+       }
+       console.log(FirstAndLastname(people))
 // 4) Get a list of people in the array ordered from youngest to oldest.
 // 5) How many people are there in each department? 
