@@ -462,6 +462,14 @@ const SortAge = (arr) => {
 console.log(SortAge(people))
 // 5) How many people are there in each department? 
 //we need to use the acc 
+//what this code does is it takes the acc and the person as params 
+//then we want to create a n obj that contains the depart and the corresponding count 
+//to do that at each element we need to firsy first spread the acc obj ...acc
+//then set a key of the current department to the count [person.department]:
+//if the acc of the current department exists it will set the acc + 1 as current acc acc[person.department] + 1
+//if it doest it defaults to zero and add zero + 1  0 + 1
+//then we do that to the last elemrnt 
+//then we initialise the acc with an empty obj
 const Departnun = (arr) => {
        return  arr.reduce((acc, person) => ({...acc , [person.department]: (acc[person.department] || 0 ) + 1 }),{})
 }
