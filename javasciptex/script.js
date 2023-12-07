@@ -509,11 +509,17 @@ const orders = [
 //this returns the order which has customerId or orderId of 234 
 //use turnary operator 
 const Filter234 = (orders) => {
-    return orders.filter((order) => order.customerId === "234" ? order : order.Id  === "234" ? order :false)
+    return orders.filter((order) => order.customerId === "234" && !order.delivered ? order : order.Id && !order.delivered  === "234" ? order :false)
 }
 console.log(Filter234(orders))
 // 2) Create a new property on each order with the total price of items ordered.
-
+//use a map to through the arr 
+//then push the property in each object 
+//use the reduce method to through each object and add the price at each product id 
+const Addnewprop = (orders) => {
+    return orders.map((order) => ({...order , OrderTotal: order.items.reduce((acc , item ) => acc + item .price, 0) }))
+}
+console.group(Addnewprop(orders))
 
 // 3) Have all the orders been delivered?
 
