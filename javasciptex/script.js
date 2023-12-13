@@ -538,6 +538,19 @@ const Notdelivered = (orders) => {
 //orders.every(order => order.delivered)
 console.log(Notdelivered(orders))
 // 4) Has the customer with ID '123' made any orders?
+//use the filter function to return the length of the aray of customid  and orderid == true 
+// reduce function 
+// the some function can be used 
+const checkCustmer123 = (orders) => {
+    const arr = orders.filter((order) => order.customerId === "123" && order.delivered === true )
+    if(arr.length > 0 ) {{
+        return "customer 123 made an order "
+    }}else{
+        "customer 123 did not make an order "
+    }
+}
+//orders.some(order => order.custoemerId === "123")
+console.log(checkCustmer123(orders))
 
 
 // 5) Have any products with an id of 123 been sold?
