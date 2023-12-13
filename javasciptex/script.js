@@ -554,3 +554,8 @@ console.log(checkCustmer123(orders))
 
 
 // 5) Have any products with an id of 123 been sold?
+//use the reduce methos 
+const Product123 = (orders) => {
+    return orders.reduce((acc, order) => acc + order.items.reduce((acc, item) =>acc +  (item.productId === "123"), 0),0)
+}
+console.log(Product123(orders))
