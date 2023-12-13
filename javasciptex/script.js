@@ -522,8 +522,21 @@ const Addnewprop = (orders) => {
 console.group(Addnewprop(orders))
 
 // 3) Have all the orders been delivered?
-
-
+//use the filter methos to filter all order with delivered 
+// will return a an array with all deliverd delivered and we will che ck the length if the lenghth is 
+//do the reverse fing not deliverd and return the length 
+//use the reduce option 
+//use the every option 
+const Notdelivered = (orders) => {
+    const arr = orders.filter((order) => order.delivered === false )
+    if (arr.length >  0 ) {
+        return "not all orders were delivered "
+    }else{
+        "all orders were deliverd "
+    }
+}
+//orders.every(order => order.delivered)
+console.log(Notdelivered(orders))
 // 4) Has the customer with ID '123' made any orders?
 
 
