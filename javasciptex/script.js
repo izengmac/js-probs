@@ -614,7 +614,15 @@ const findFirstcommenter = (comments,users) => {
 console.log(findFirstcommenter(comments,users))
 
 // 3) Which user commented 'OK great thanks'?
-
+//find the cooment of the id with comment 'OK great thanks'
+//find the person and return first and lastname
+const Okgreatcommenter = (comments,users) => {
+   const commentObj = comments.find((comment) => comment.text === "OK great thanks").userId
+   const PersonObj = users.find((user) => user.id === `${commentObj}`)
+   return `the first comment was made by ${PersonObj.firstName} ${PersonObj.lastName}`
+   
+}
+console.log(Okgreatcommenter(comments,users))
 
 
 // 4) Add the user's first and last name to each comment in the comments array
