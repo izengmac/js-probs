@@ -603,8 +603,15 @@ console.log(ReturnMarshalid(users))
 
 
 // 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
-
-
+//we have to return the first commetn in the arrasy 
+// and return the name of the person 
+const findFirstcommenter = (comments,users) => {
+   const commentObj = comments.find((comment) => comments[0]).userId
+   const PersonObj = users.find((user) => user.id === `${commentObj}`)
+   return `the first comment was made by ${PersonObj.firstName} ${PersonObj.lastName}`
+   
+}
+console.log(findFirstcommenter(comments,users))
 
 // 3) Which user commented 'OK great thanks'?
 
