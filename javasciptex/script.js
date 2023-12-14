@@ -626,7 +626,27 @@ console.log(Okgreatcommenter(comments,users))
 
 
 // 4) Add the user's first and last name to each comment in the comments array
-
-
+//add users first and last name to each comment 
+//we should map though each item in the comment and check condition to do a function 
+const addFirstNameLastName = (comments, users) => {
+    return comments.map(comment => {
+      const user = users.find(user => user.id === comment.UserId);
+  
+      // Check if a matching user is found
+      if (user) {
+        const { firstName, lastName } = user;
+        return { ...comment, firstName, lastName };
+      }
+  
+      // If no matching user is found, return the original comment
+      return comment;
+    });
+  };
+  
+  console.log(addFirstNameLastName(comments, users));
+  
+  
+  console.log(addFirstNameLastName(comments, users));
+  
 
 // 5) Get a list of the users who haven't commented
